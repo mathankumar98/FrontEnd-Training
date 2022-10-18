@@ -1,0 +1,36 @@
+//Event delegration 
+//with The help Delegartion We Can Able To Add Element Are Remove Element
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event delegration</title>
+</head>
+<body>
+    <p>Hi From Fruit Shop</p>
+    <ul id="mylist">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+    </ul>
+    <script>
+        const mylist=document.getElementById("mylist");
+
+        mylist.addEventListener("click",function(e)
+        {
+            const target=e.target;
+
+            if(target.matches("li"))
+            {
+                target.style.background="red";
+            }
+        });
+
+        const newli=document.createElement("li");
+        newli.textContent="Mango";
+        mylist.appendChild(newli)
+    </script>
+    
+</body>
+</html>
