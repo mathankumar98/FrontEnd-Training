@@ -1,0 +1,35 @@
+//Event bubblig and capturing 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulling Vs Capturing</title>
+</head>
+
+<body>
+    <!-- <script src="Bubbling and capturing.js"></script> -->
+    <p id="Parent">
+        Lorem  <strong id="Child"> ipsum </strong>dolor sit amet consectetur adipisicing elit. Quod fuga non nulla velit ullam. Dolorem veniam earum
+        fugiat veritatis voluptatibus optio, libero magni unde, autem laborum molestiae ratione, repellendus natus.
+    </p>
+        <script type="text/JavaScript">
+
+    const Parent=document.getElementById("Parent");
+    const Child=document.getElementById("Child");
+
+Parent.addEventListener("click",function()
+{
+    console.log("Iam The Parent");
+},true)//if it is true then it will be event capturing
+//if  it is not true it will be event bubbling
+
+Child.addEventListener("click",function()//need to add addeventlistener to achive the event bubbling
+{
+    console.log("Iam The Child");
+})
+</script>
+</body>
+
+</html>
